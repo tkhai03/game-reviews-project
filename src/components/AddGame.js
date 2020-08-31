@@ -38,7 +38,6 @@ export default class AddGame extends Component {
     render() {
         return (
             <div>
-                <form>
                     <input onChange={(e) => this.handleAddReviewer(e)}
                     placeholder= 'reviewer'/>
                     <input onChange={(e) => this.handleAddImage(e)}
@@ -48,7 +47,6 @@ export default class AddGame extends Component {
                     <input onChange={(e) => this.handleAddDesc(e)}
                     placeholder='desc'/>
                     <button onClick={() => this.props.handleAddReview(this.state)}>Submit</button>
-                </form>
             </div>
         )
     }

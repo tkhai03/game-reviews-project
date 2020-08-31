@@ -3,6 +3,7 @@ import axios from 'axios'
 import AddGame from './AddGame'
 
 
+
 class List extends React.Component {
     constructor() {
         super()
@@ -10,6 +11,7 @@ class List extends React.Component {
         this.state = {
             allData: []
         }
+        this.handleAddReview=this.handleAddReview.bind(this)
     }
     componentDidMount() {
         axios.get('/api/reviews').then(response => this.setState({
@@ -17,10 +19,20 @@ class List extends React.Component {
         }))
     }
     handleAddReview(newReview){
+        console.log('hit')
         axios.post('/api/reviews', newReview).then(response => this.setState({
             allData: response.data
         }))
     }
+
+    handleDeleteReview(){
+        axios.delete('/api/reviews').then(response => {this.setState({
+            
+        })
+
+        })
+    }
+
 
     render() {
         console.log(this.state.allData)
@@ -31,6 +43,7 @@ class List extends React.Component {
                 <div><img className= "images" src= {e.image} alt=''/> </div>
                 <div className= "reviewer">Reviewer: {e.reviewer}</div>
                 <div className= 'Description'>Description: {e.desc}</div>
+                <button onClick={() => this.handleDeleteReview}>Delete</button>
                 </div>
                 )
         })

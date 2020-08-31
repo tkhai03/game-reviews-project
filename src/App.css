@@ -25,20 +25,28 @@
 .images {
   height: 200px;
   width: auto;
+  padding-left: 15px;
 }
 
 .Description {
-  font-size: medium;   
+  height: auto;
+  width: 600px;
+  font-size: 20px;
+  padding-left: 15px;
 }
 
 .title {
   font-size: 40px;
   font-weight: 200;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-left: 15px;;
 }
 
 .reviewer {
-  font-size: 20px;
+  font-size: 25px;
+  padding-left: 15px;
+
+
 }
 
 h1 {

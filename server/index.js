@@ -9,6 +9,7 @@ app.use(express.json())
 
 app.get('/api/reviews', reviewCtrl.getAllReviews)
 
+app.post('/api/reviews', reviewCtrl.addReviews)
 
 //* Cart endpoints
 // app.get('/api/cart', cartCtrl.getCart)
