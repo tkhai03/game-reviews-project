@@ -1,13 +1,25 @@
 *{
   margin: 0;
-  padding: 5px;
+  padding: 0;
   box-sizing: border-box;
+  background-color: #1b2838;
+}
+
+.app-name {
+  background-color: black;
+  color: silver;
 }
 
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: black;
+}
+.navbar-button{
+  color: silver;
+  font-style: italic;
+  outline: none;
 }
 
 .images {

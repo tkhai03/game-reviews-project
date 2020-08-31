@@ -4,7 +4,7 @@ import axios from 'axios'
 import Navbar from './components/Navbar'
 import List from './components/List'
 
-import AddGame from "./components/AddGame"
+
 import './App.css';
 
 function App() {
@@ -13,7 +13,6 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <AddGame />
       <List />
     </div>
   );

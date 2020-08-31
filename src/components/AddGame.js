@@ -8,7 +8,7 @@ export default class AddGame extends Component {
             title: '',
             desc: ''
         }
-//* e.target.value
+
     }
        handleAddReviewer(e) {
            this.setState({
@@ -47,7 +47,7 @@ export default class AddGame extends Component {
                     placeholder='title'/>
                     <input onChange={(e) => this.handleAddDesc(e)}
                     placeholder='desc'/>
-                    <button>Submit</button>
+                    <button onClick={() => this.props.handleAddReview(this.state)}>Submit</button>
                 </form>
             </div>
         )

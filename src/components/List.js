@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import AddGame from './AddGame'
 
 
 class List extends React.Component {
@@ -15,6 +16,12 @@ class List extends React.Component {
             allData: response.data
         }))
     }
+    handleAddReview(newReview){
+        axios.post('/api/reviews', newReview).then(response => this.setState({
+            allData: response.data
+        }))
+    }
+
     render() {
         console.log(this.state.allData)
         const data = this.state.allData.map((e) => {
@@ -29,6 +36,7 @@ class List extends React.Component {
         })
         return (
             <div>
+                <AddGame handleAddReview= {this.handleAddReview}/>
                 {data}
             </div>
         )

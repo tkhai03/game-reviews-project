@@ -16,7 +16,7 @@ export default class NavBar extends Component {
                     <div className='navbar-container'>
                         <button className='navbar-button'>Home</button>
                         <button className='navbar-button'>About</button>
-                        <button className='navbar-button'>Contact</button>
+                        <button className='navbar-button'>Support</button>
                     </div>
 
                 </div>
