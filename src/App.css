@@ -28,7 +28,7 @@
   padding-left: 15px;
 }
 
-.Description {
+.description {
   height: auto;
   width: 600px;
   font-size: 20px;
@@ -53,3 +53,14 @@ h1 {
   font-size: 100px;
 }
 
+.allInputs {
+  height: 400px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.desc {
+  height: 100px;
+  padding-left: 30px;
+}

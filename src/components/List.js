@@ -12,6 +12,7 @@ class List extends React.Component {
             allData: []
         }
         this.handleAddReview=this.handleAddReview.bind(this)
+        this.handleDeleteReview=this.handleDeleteReview.bind(this)
     }
     componentDidMount() {
         axios.get('/api/reviews').then(response => this.setState({
@@ -25,9 +26,10 @@ class List extends React.Component {
         }))
     }
 
-    handleDeleteReview(){
-        axios.delete('/api/reviews').then(response => {this.setState({
-            
+    handleDeleteReview(id){
+        axios.delete(`/api/reviews/${id}`).then(response => {
+            this.setState({
+                allData: response.data
         })
 
         })
@@ -42,8 +44,8 @@ class List extends React.Component {
                 <div className= "title">Title: {e.title}</div>
                 <div><img className= "images" src= {e.image} alt=''/> </div>
                 <div className= "reviewer">Reviewer: {e.reviewer}</div>
-                <div className= 'Description'>Description: {e.desc}</div>
-                <button onClick={() => this.handleDeleteReview}>Delete</button>
+                <div className= 'description'>Description: {e.desc}</div>
+                <button onClick={() => this.handleDeleteReview(e.id)}>Delete</button>
                 </div>
                 )
         })

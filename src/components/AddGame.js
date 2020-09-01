@@ -37,14 +37,14 @@ export default class AddGame extends Component {
 
     render() {
         return (
-            <div>
+            <div className= 'allInputs'>
                     <input onChange={(e) => this.handleAddReviewer(e)}
                     placeholder= 'reviewer'/>
                     <input onChange={(e) => this.handleAddImage(e)}
-                    placeholder='image'/>
+                    placeholder='image Url'/>
                     <input onChange={(e) => this.handleAddTitle(e)}
                     placeholder='title'/>
-                    <input onChange={(e) => this.handleAddDesc(e)}
+                    <input className= "desc" onChange={(e) => this.handleAddDesc(e)}
                     placeholder='desc'/>
                     <button onClick={() => this.props.handleAddReview(this.state)}>Submit</button>
             </div>

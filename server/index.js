@@ -11,6 +11,8 @@ app.get('/api/reviews', reviewCtrl.getAllReviews)
 
 app.post('/api/reviews', reviewCtrl.addReviews)
 
+app.delete('/api/reviews/:id' , reviewCtrl.deleteReviews)
+
 //* Cart endpoints
 // app.get('/api/cart', cartCtrl.getCart)
 // app.post('/api/cart', cartCtrl.addToCart)
